@@ -6,8 +6,8 @@ import io.realm.annotations.RealmClass
 @RealmClass
 open class UserDimas: RealmObject() {
     private var id:Int = 0
-    private var nim: String = ""
-    private var jurusan: String = ""
+    private var provider: String = ""
+    private var perusahaan: String = ""
 
     fun setId(id:Int){
         this.id = id
@@ -18,21 +18,21 @@ open class UserDimas: RealmObject() {
 
     }
 
-    fun setNim(nim:String){
-        this.nim = nim
+    fun setProvider(provider:String){
+        this.provider = provider
     }
 
-    fun getNim(): String {
-        return nim
+    fun getProvider(): String {
+        return provider
 
     }
 
-    fun setJurusan(jurusan:String){
-        this.jurusan = jurusan
+    fun setPerusahaan(perusahaan:String){
+        this.perusahaan = perusahaan
     }
 
-    fun getJurusan(): String {
-        return jurusan
+    fun getPerusahaan(): String {
+        return perusahaan
 
     }
 }
