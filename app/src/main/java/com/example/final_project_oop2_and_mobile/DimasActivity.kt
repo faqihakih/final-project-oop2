@@ -13,8 +13,6 @@ import kotlinx.android.synthetic.main.item_userdimas.*
 class DimasActivity : AppCompatActivity() {
     lateinit var userDimasAdapter: UserDimasAdapter
     var ln = LinearLayoutManager(this)
-
-
     lateinit var realm: Realm
 
     fun initView(){

@@ -10,12 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_dimas.setOnClickListener(){
-            startActivity(Intent(this,DimasActivity::class.java))
+        btn_faqih.setOnClickListener {
+            startActivity(Intent(this,FaqihActivity::class.java))
         }
-
-        btn_faqih.setOnClickListener(){
-            startActivity(Intent(this,FaqihActifity::class.java))
+        btn_dimas.setOnClickListener {
+            startActivity(Intent(this,DimasActivity::class.java))
         }
     }
 }

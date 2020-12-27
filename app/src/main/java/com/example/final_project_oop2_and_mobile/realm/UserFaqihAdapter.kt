@@ -32,15 +32,17 @@ class UserFaqihAdapter(val context: Context): RecyclerView.Adapter<UserFaqihAdap
     inner class UserFaqihViewHolder(i: View): RecyclerView.ViewHolder(i){
         val tv2id : TextView = i.findViewById(R.id.tv2_id)
         val tv2nama : TextView = i.findViewById(R.id.tv2_nama)
-        val tv2nim : TextView = i.findViewById(R.id.tv2_nim)
+        val tv2_nim : TextView = i.findViewById(R.id.tv2_nim)
+        val tv2_email : TextView = i.findViewById(R.id.tv2_email)
+        val tv2_alamat : TextView = i.findViewById(R.id.tv2_alamat)
         fun bindModel(u: UserFaqih){
             tv2id.text = u.getId().toString()
             tv2nama.text = u.getNama()
-            tv2nim.text = u.getNim()
+            tv2_nim.text = u.getNim()
+            tv2_email.text = u.getEmail()
+            tv2_alamat.text = u.getAlamat()
         }
 
     }
-
-
 
 }
