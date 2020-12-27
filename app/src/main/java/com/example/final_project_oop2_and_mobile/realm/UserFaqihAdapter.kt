@@ -36,7 +36,7 @@ class UserFaqihAdapter(val context: Context): RecyclerView.Adapter<UserFaqihAdap
         fun bindModel(u: UserFaqih){
             tv2id.text = u.getId().toString()
             tv2nama.text = u.getNama()
-            tv2nim.text = u.getNIM()
+            tv2nim.text = u.getNim()
         }
 
     }

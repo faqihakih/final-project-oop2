@@ -13,5 +13,9 @@ class MainActivity : AppCompatActivity() {
         btn_dimas.setOnClickListener(){
             startActivity(Intent(this,DimasActivity::class.java))
         }
+
+        btn_faqih.setOnClickListener(){
+            startActivity(Intent(this,FaqihActifity::class.java))
+        }
     }
 }

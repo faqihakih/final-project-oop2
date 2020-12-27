@@ -2,8 +2,9 @@ package com.example.final_project_oop2_and_mobile.realm
 
 import io.realm.RealmObject
 import io.realm.annotations.RealmClass
+
 @RealmClass
-class UserFaqih {
+open class UserFaqih: RealmObject() {
     private var id:Int = 0
     private var nama: String = ""
     private var nim: String = ""
@@ -18,33 +19,38 @@ class UserFaqih {
         return id
 
     }
-    fun setNama(provider:String){
-        this.nama = provider
+
+    fun setNama(nama:String){
+        this.nama = nama
     }
 
     fun getNama(): String {
         return nama
 
     }
-    fun setNIM(provider:String){
-        this.nim = provider
+
+    fun setNim(nim:String){
+        this.nim = nim
     }
 
-    fun getNIM(): String {
+    fun getNim(): String {
         return nim
+
     }
-    fun setEmail(provider:String){
-        this.email = provider
+    fun setEmail(email:String){
+        this.email = email
     }
 
     fun getEmail(): String {
         return email
+
     }
-    fun setAlamat(provider:String){
-        this.alamat = provider
+    fun setAlamat(alamat:String){
+        this.alamat = alamat
     }
 
     fun getAlamat(): String {
         return alamat
+
     }
 }

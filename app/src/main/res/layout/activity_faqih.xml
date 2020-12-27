@@ -15,10 +15,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Provider"
+            android:text="Data Mahasiswa"
             android:textColor="#000"
             android:textSize="24dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="ID"
+            android:textColor="#000"
+            android:textSize="18dp" />
 
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,13 +53,27 @@
             android:id="@+id/et_nim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_marginTop="10dp"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tambah Data"
-            android:backgroundTint="@color/colorAccent"/>
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Tambah Data" />
+            <Button
+                android:id="@+id/btn_hapus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Hapus Data" />
+        </LinearLayout>
         <TextView
             android:id="@+id/hasil"
             android:layout_width="match_parent"

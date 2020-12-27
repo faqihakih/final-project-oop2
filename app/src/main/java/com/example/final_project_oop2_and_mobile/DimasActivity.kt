@@ -1,6 +1,5 @@
 package com.example.final_project_oop2_and_mobile
 
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
