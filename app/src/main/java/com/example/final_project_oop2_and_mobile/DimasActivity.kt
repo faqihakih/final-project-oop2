@@ -8,27 +8,27 @@ import com.example.final_project_oop2_and_mobile.realm.UserDimasAdapter
 import io.realm.Realm
 import io.realm.exceptions.RealmException
 import kotlinx.android.synthetic.main.activity_dimas.*
-import kotlinx.android.synthetic.main.item_userdimas.*
 
 class DimasActivity : AppCompatActivity() {
     lateinit var userDimasAdapter: UserDimasAdapter
-    var ln = LinearLayoutManager(this)
     lateinit var realm: Realm
+    var ln = LinearLayoutManager(this)
 
     fun initView(){
         rv_hasil.layoutManager = ln
         userDimasAdapter = UserDimasAdapter(this)
         rv_hasil.adapter = userDimasAdapter
-
+        Realm.init(applicationContext)
         realm = Realm.getDefaultInstance()
         getAllUSer()
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dimas)
         initView()
         action()
-        setContentView(R.layout.activity_dimas)
+
     }
     fun action(){
         btn_add.setOnClickListener {
@@ -56,22 +56,23 @@ class DimasActivity : AppCompatActivity() {
             }
         }
 
-        /*btn_ubah.setOnClickListener(){
+        btn_ubah.setOnClickListener(){
             realm.beginTransaction()
-            realm.where(UserDimas::class.java).equalTo("tv2_id", et_id.text.toString().toInt()).findFirst().let {
+            realm.where(UserDimas::class.java).equalTo("id", et_id.text.toString().toInt()).findFirst().let {
                 it!!.setProvider(et_provider.text.toString())
                 it!!.setPerusahaan(et_perusahaan.text.toString())
             }
             realm.commitTransaction()
-        }*/
+            getAllUSer()
+        }
 
         btn_hapus.setOnClickListener(){
             realm.beginTransaction()
-            realm.where(UserDimas::class.java).equalTo("tv2_id", et_id.text.toString().toInt()).findFirst().let {
+            realm.where(UserDimas::class.java).equalTo("id", et_id.text.toString().toInt()).findFirst().let {
                 it!!.deleteFromRealm()
-                getAllUSer()
             }
             realm.commitTransaction()
+            getAllUSer()
         }
     }
     fun getAllUSer(){
